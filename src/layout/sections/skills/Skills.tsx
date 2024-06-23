@@ -8,13 +8,48 @@ export const Skills = () => {
   return (
     <StyledSkills>
       <SectionTitle>My Skills</SectionTitle>
-      <FlexWrapper>
-        <Skill iconId={"code"} />
-        <Skill iconId={"css"} />
-        <Skill iconId={"react"} />
-        <Skill iconId={"typeScript"} />
-        <Skill iconId={"styledComponents"} />
-        <Skill iconId={"figma"} />
+      <FlexWrapper wrap={"wrap"} justify={"space-between"}>
+        <Skill
+          iconId={"code"}
+          title={"HTML5"}
+          description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua Ut enim"
+        />
+        <Skill
+          iconId={"css"}
+          title={"CSS3"}
+          description={
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
+          }
+        />
+        <Skill
+          iconId={"react"}
+          title={"REACT"}
+          description={
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
+          }
+        />
+        <Skill
+          iconId={"typeScript"}
+          title={"TYPESCRIPT"}
+          description={
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
+          }
+        />
+        <Skill
+          iconId={"styledComponents"}
+          title={"STYLED COMPONENTS"}
+          description={
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
+          }
+        />
+        <Skill
+          iconId={"figma"}
+          title={"WEB DESIGN"}
+          description={
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
+          }
+        />
       </FlexWrapper>
     </StyledSkills>
   );

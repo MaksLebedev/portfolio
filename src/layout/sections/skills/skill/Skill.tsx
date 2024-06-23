@@ -4,22 +4,25 @@ import { Icon } from "../../../../components/icon/Icon";
 
 type SkillPropsType = {
   iconId: string;
+  title: string;
+  description: string;
 };
 
 export const Skill = (props: SkillPropsType) => {
   return (
     <StyledSkill>
       <Icon iconId={props.iconId} />
-      <SkillTitle>html5</SkillTitle>
-      <SkillText>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua Ut enim
-      </SkillText>
+      <SkillTitle>{props.title}</SkillTitle>
+      <SkillText>{props.description}</SkillText>
     </StyledSkill>
   );
 };
 
-const StyledSkill = styled.div``;
+const StyledSkill = styled.div`
+  width: 30%;
+  background-color: rgba(255, 255, 255, 0.56);
+  margin: 10px;
+`;
 
 const SkillTitle = styled.h3``;
 
