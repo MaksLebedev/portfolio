@@ -3,6 +3,7 @@ import styled from "styled-components";
 import photo from "../../../assets/images/photo.webp";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
+import { theme } from "../../../styles/Theme";
 
 export const Main = () => {
   return (
@@ -11,10 +12,14 @@ export const Main = () => {
         <FlexWrapper align={"center"} justify={"space-between"}>
           <div>
             <SmallText>Hi There</SmallText>
-            <Name>I am Maksim Lebedev</Name>
+            <Name>
+              I am <span>Maksim Lebedev</span>
+            </Name>
             <MainTitle>A Web developer</MainTitle>
           </div>
-          <Photo src={photo} alt="photo_developer" />
+          <PhotoWrapper>
+            <Photo src={photo} alt="photo_developer" />
+          </PhotoWrapper>
         </FlexWrapper>
       </Container>
     </StyledMain>
@@ -28,6 +33,22 @@ const StyledMain = styled.section`
   /* align-items: center; */
 `;
 
+const PhotoWrapper = styled.div`
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 360px;
+    height: 470px;
+    border: 5px solid ${theme.colors.accent};
+    top: -24px;
+    right: -34px;
+    z-index: -1;
+  }
+`;
+
 const Photo = styled.img`
   width: 350px;
   height: 430px;
@@ -35,7 +56,9 @@ const Photo = styled.img`
 `;
 
 const MainTitle = styled.h1`
-  /* color: red; */
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 27px;
 `;
 
 const Name = styled.h2`
@@ -43,12 +66,27 @@ const Name = styled.h2`
   font-style: normal;
   font-weight: 700;
   font-size: 50px;
-  line-height: 50px;
+  margin: 10px 0;
+
+  span {
+    position: relative;
+    z-index: 0;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 100%;
+      height: 20px;
+      background-color: ${theme.colors.accent};
+      position: absolute;
+      bottom: 0px;
+      z-index: -1;
+    }
+  }
 `;
 
 const SmallText = styled.h2`
-  font-family: "Poppins";
-  font-style: normal;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 14px;
 `;
