@@ -7,12 +7,12 @@ export const Slogan = () => {
   return (
     <StyledSlogan>
       <SectionTitle>I Am Available For Freelance</SectionTitle>
-      <Button type={'button'}>Hire me</Button>
+      <Button type={"button"}>Hire me</Button>
     </StyledSlogan>
   );
 };
 
 const StyledSlogan = styled.section`
-    min-height: 30vh;
-    background-color: #ffe1f5;
+  min-height: 30vh;
+  background-color: #ffe1f5;
 `;
