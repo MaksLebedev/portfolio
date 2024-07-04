@@ -53,7 +53,7 @@ const SkillText = styled.p`
   color: ${theme.colors.font};
 `;
 
-const IconWrapper = styled.div`
+export const IconWrapper = styled.div`
   position: relative;
 
   &::before {
