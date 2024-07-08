@@ -46,7 +46,7 @@ const Name = styled.span`
   letter-spacing: 0.06em;
   text-transform: uppercase;
   display: inline-block;
-  margin: 22px 0 42px;
+  margin: 22px 0 35px;
 `;
 
 const Pagination = styled.div`

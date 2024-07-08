@@ -29,8 +29,13 @@ const StyledSkill = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center; */
-  width: 380px;
-  padding: 62px 20px 40px;
+  width: 330px;
+  flex-grow: 1;
+  padding: 42px 20px 52px;
+
+  @media ${theme.media.mobile} {
+    padding: 62px 40px;
+  }
 `;
 
 const SkillTitle = styled.h3`

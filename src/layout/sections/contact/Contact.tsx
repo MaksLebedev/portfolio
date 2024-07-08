@@ -31,7 +31,8 @@ const StyledForm = styled.form`
   align-items: center;
   gap: 16px;
   margin: 0 auto;
-  margin-top: 62px;
+  /* margin-top: 62px; */
+  margin-top: -25px;
 `;
 
 const Field = styled.input`
