@@ -1,8 +1,8 @@
 import React from "react";
 import { S } from "./Header_Styles";
 
-import { Container } from "../../components/Container";
-import { FlexWrapper } from "../../components/FlexWrapper";
+import { Container } from "../../components/commonComponents/Container";
+import { FlexWrapper } from "../../components/commonComponents/FlexWrapper";
 import { Logo } from "../../components/logo/Logo";
 import { DesktopMenu } from "./headerMenu/desktopMenu/DesktopMenu";
 import { MobileMenu } from "./headerMenu/mobileMenu/MobileMenu";
