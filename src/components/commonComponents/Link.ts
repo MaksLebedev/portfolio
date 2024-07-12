@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { theme } from "../../styles/Theme";
 
-export const Link = styled.a`
+export const Link = styled.a<{ active?: boolean }>`
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -12,6 +12,24 @@ export const Link = styled.a`
   position: relative;
 
   z-index: 1;
+
+  ${(props) =>
+    props.active &&
+    css<{ active?: boolean }>`
+      &::before {
+        content: "";
+        display: inline-block;
+        height: 10px;
+        background-color: ${theme.colors.accent};
+
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        bottom: 5px;
+
+        z-index: -1;
+      }
+    `}
 
   &:hover {
     &::before {
@@ -26,6 +44,12 @@ export const Link = styled.a`
       bottom: 5px;
 
       z-index: -1;
+
+      ${(props) =>
+        props.active &&
+        css<{ active?: boolean }>`
+          height: 10px;
+        `}
     }
   }
 `;
