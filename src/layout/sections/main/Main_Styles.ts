@@ -56,6 +56,10 @@ const MainTitle = styled.h1`
     Fmin: 20,
   })};
 
+  p {
+    display: none;
+  }
+
   /* font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 27px; */
@@ -111,10 +115,10 @@ const SmallText = styled.h2`
 `;
 
 export const S = {
-    Main,
-    PhotoWrapper,
-    Photo,
-    MainTitle,
-    Name,
-    SmallText,
-}
+  Main,
+  PhotoWrapper,
+  Photo,
+  MainTitle,
+  Name,
+  SmallText,
+};
