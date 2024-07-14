@@ -13,43 +13,30 @@ export const Link = styled.a<{ active?: boolean }>`
 
   z-index: 1;
 
-  ${(props) =>
-    props.active &&
-    css<{ active?: boolean }>`
-      &::before {
-        content: "";
-        display: inline-block;
-        height: 10px;
-        background-color: ${theme.colors.accent};
-
-        position: absolute;
-        left: 0px;
-        right: 0px;
-        bottom: 5px;
-
-        z-index: -1;
-      }
-    `}
-
   &:hover {
     &::before {
-      content: "";
-      display: inline-block;
       height: 10px;
-      background-color: ${theme.colors.accent};
-
-      position: absolute;
-      left: 0px;
-      right: 0px;
-      bottom: 5px;
-
-      z-index: -1;
-
-      ${(props) =>
-        props.active &&
-        css<{ active?: boolean }>`
-          height: 10px;
-        `}
     }
+  }
+
+  &::before {
+    content: "";
+    display: inline-block;
+    background-color: ${theme.colors.accent};
+
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 5px;
+
+    z-index: -1;
+    height: 0;
+    transition: ${theme.animations.transition};
+
+    ${(props) =>
+      props.active &&
+      css<{ active?: boolean }>`
+        height: 10px;
+      `};
   }
 `;

@@ -12,8 +12,12 @@ export const theme = {
   },
 
   media: {
-    tablet: 'screen and (max-width: 768px)',
-    mobile: 'screen and (max-width: 576px)',
-    desctop: 'screen and (min-width: 1140px)',
-  }
+    tablet: "screen and (max-width: 768px)",
+    mobile: "screen and (max-width: 576px)",
+    desctop: "screen and (min-width: 1140px)",
+  },
+
+  animations: {
+    transition: "0.2s ease-in-out",
+  },
 };

@@ -46,6 +46,7 @@ const SocialLink = styled.a`
     background-color: ${theme.colors.accent};
     color: ${theme.colors.imageHoverColor};
     transform: translateY(-4px);
+    transition: ${theme.animations.transition};
   }
 `;
 
